@@ -9,6 +9,7 @@ import LoginPage from '@/pages/LoginPage';
 import RegisterPage from '@/pages/RegisterPage';
 import CreateListingPage from '@/pages/CreateListingPage';
 import EditListingPage from '@/pages/EditListingPage';
+import PortfolioPage from '@/pages/PortfolioPage';
 import { seedIfEmpty } from '@/lib/storage';
 
 seedIfEmpty();
@@ -26,6 +27,7 @@ function AppRoutes() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/listings/:id" element={<ListingDetailPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />

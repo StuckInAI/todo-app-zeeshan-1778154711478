@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
-import { Briefcase, LayoutDashboard, LogOut, LogIn, UserPlus, PlusCircle } from 'lucide-react';
+import { Briefcase, LayoutDashboard, LogOut, LogIn, UserPlus, PlusCircle, User } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -20,6 +20,10 @@ export default function Navbar() {
           <span>JobBoard</span>
         </Link>
         <div className={styles.actions}>
+          <Link to="/portfolio" className={`btn btn-ghost btn-sm ${styles.navLink}`}>
+            <User size={16} />
+            Portfolio
+          </Link>
           {user ? (
             <>
               <Link to="/dashboard" className={`btn btn-ghost btn-sm ${styles.navLink}`}>
