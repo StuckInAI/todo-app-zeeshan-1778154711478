@@ -1,0 +1,152 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition);
+  min-height: 58px;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: var(--color-surface-2);
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: var(--color-completed-text);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  transition: border-color var(--transition), background var(--transition);
+  color: #fff;
+}
+
+.checkbox:hover {
+  border-color: var(--color-primary);
+}
+
+.checkboxChecked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.text {
+  flex: 1;
+  font-size: 0.97rem;
+  color: var(--color-text);
+  word-break: break-word;
+  line-height: 1.4;
+  cursor: default;
+  user-select: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition);
+  flex-shrink: 0;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.editBtn:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+  background: #fef2f2;
+}
+
+.editArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editInput {
+  flex: 1;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 0.97rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.saveBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.saveBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.cancelBtn:hover {
+  background: #e2e8f0;
+}
